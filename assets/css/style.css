@@ -45,9 +45,9 @@
     padding: 0;
 
     font-family: 'Roboto', sans-serif;
-    /* border: solid red 2px; */
     color: white;
 
+    overflow-x: hidden;
     /* border: solid red 2px; */
 }
 
@@ -64,23 +64,26 @@ header {display: flex; background-color: #141414; box-shadow: 0px 0px 36px #0000
 height: var(--height-header); z-index: 2;}
 
 header #Title {
-    border: solid rgba(255, 0, 0, 0) 2px; 
     width: 100vw; 
     z-index: 1;
+
+    height: 90%;
+    
+    /* border: solid rgb(255, 0, 0) 2px;  */
 }
 header #Title h1 {
-    border: solid rgba(255, 0, 0, 0) 2px; 
+    /* border: solid rgb(255, 0, 0) 2px;  */
     width: 200px; 
     color: white; 
-    font-size: 2rem;
+    font-size: 20px;
     
     z-index: 1;
     background-color: transparent;
 }
 
-    #X { height: fit-content; }
+    #X { height: 50px; overflow: hidden;}
     .hamburger-menu {
-        border: solid rgba(255, 0, 0, 0) 2px; 
+        /* border: solid rgb(255, 0, 0) 2px;  */
         width: 100px; 
         height: fit-content;
         padding-top: 30px;
@@ -88,6 +91,9 @@ header #Title h1 {
         right: 0px;
         z-index: 3;
         
+    }
+    .hamburger-menu-open .line {
+        margin-top: -40px;
     }
 
     .menu_cont {
@@ -122,12 +128,13 @@ header #Title h1 {
         header .hamburger-menu #hbg-1  {opacity: 1; transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
         header .hamburger-menu #hbg-3 {opacity: 1; transition: all 0.5s cubic-bezier(.0, .0, .0, 1);}
         
-        header .hamburger-menu-open #hbg-1 {transform: rotate(45deg); opacity: 1; margin-top: 20px;transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
-        header .hamburger-menu-open #hbg-2 {transform: rotate(-45deg); opacity: 1; margin-top: -3.5px; z-index: 1; transition: all 0.5s cubic-bezier(.215, .61, .355, 1);}
-        header .hamburger-menu-open #hbg-3 {opacity: 0; transition: all 0s cubic-bezier(.215, .61, .355, 1); }
+        header .hamburger-menu-open #hbg-1 {transform: rotate(45deg); opacity: 1; margin-top: 10px;transition: all 0.5s cubic-bezier(.215, .61, .355, 1); width: 30%;}
+        header .hamburger-menu-open #hbg-2 {transform: rotate(-45deg); opacity: 1; margin-top: -3.5px; z-index: 1; transition: all 0.5s cubic-bezier(.215, .61, .355, 1); width: 30%;}
+        header .hamburger-menu-open #hbg-3 {opacity: 0; transition: all 0s cubic-bezier(.215, .61, .355, 1); width: 20%;}
+
         .hamburger-menu-open{right: 0%; top: 0%; }
         
-        menu-in {width: 20%; height: 70%; border: solid rgba(255, 0, 0, 0) 2px; }
+        menu-in {width: 100%; height: 70%; border: solid rgba(255, 0, 0, 0) 2px; }
         menu-in a { opacity: 1; text-decoration: none; font-size: 1.5rem; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 
         header div div { 
@@ -139,6 +146,14 @@ header #Title h1 {
         header .hamburger-menu:hover {cursor: pointer;}
         header img:hover {cursor: pointer;}
         
+
+    menu {
+        /* border: solid red 2px; */
+        height: 100%;
+        width: 100%;
+
+        z-index: 1;
+    }
         
         
         
@@ -147,8 +162,11 @@ body{ background-color: #1C1C1C; position: relative; height: 100%; overflow-x: h
 #logo {
     /* border: solid red 2px; */
     margin-top: 20px;
+
     width: 40px;
+    max-width: 30px;
     height: 40px;
+    max-height: 30px;
 
     margin-left: 5%; 
     position: fixed;
